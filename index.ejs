@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MEZEG AVIR</title>
+</head>
+
+<body>
+<% cities.forEach(function(cityData){ %>
+    <div><h2>Weather in <%= cityData.city %></h2></div>
+    <div> Temperature <%= cityData.temperature %></div>
+    <div><%= cityData.humidity %></div>
+    <div> Wind Speed: <%= cityData.windSpeed %></div>
+    <div><%= cityData.windDirection %></div>
+    <img width=100 src=<%= cityData.icon %> >
+<% }) %>
+
+<script>
+setTimeout(function(){
+        location.reload();
+    }, 6000
+)
+</script>
+</body>
+</html>
